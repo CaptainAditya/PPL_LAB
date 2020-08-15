@@ -1,0 +1,28 @@
+
+;; Function main (null)
+;; enabled by -tree-original
+
+
+{
+  int a[3];
+  int b[3] = {1, 2, 3};
+  int i;
+  int * p;
+
+    int a[3];
+    int b[3] = {1, 2, 3};
+    int i;
+    int * p;
+  i = 0;
+  goto <D.2320>;
+  <D.2319>:;
+  a[i] = b[i];
+  i++ ;
+  <D.2320>:;
+  if (i <= 2) goto <D.2319>; else goto <D.2321>;
+  <D.2321>:;
+  p = (int *) &a;
+  *(p + 8) = 5;
+}
+return 0;
+
